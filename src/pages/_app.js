@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import Layout from "@/components/Layout";
+import Layout from "@/components/MainLayout";
 import { supabase } from "@/lib/suppabase";
 import "@/styles/globals.css";
 
