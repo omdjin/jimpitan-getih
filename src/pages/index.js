@@ -1,8 +1,8 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Card, Container, Col, Row } from 'react-bootstrap';
-import styles from "../styles/Home.module.css";
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <p className={styles.description}>Plasma anda selamatkan nyawa mereka!</p>
       <Container>
         <Row className="justify-content-md-center">
-          <Col md >
+          <Col md>
             <Card>
               <Card.Body>
                 <Link href="/jadi-donatur">

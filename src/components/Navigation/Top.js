@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import Link from 'next/link';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
-const TopNav = () =>
+const TopNav = () => (
   <Navbar bg="light" expand="lg">
     <Container>
       <Link href="/">
@@ -19,6 +19,7 @@ const TopNav = () =>
         </Nav>
       </Navbar.Collapse>
     </Container>
-  </Navbar>;
+  </Navbar>
+);
 
 export default TopNav;
