@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-import Layout from "@/components/MainLayout";
-import { supabase } from "@/lib/suppabase";
-import "@/styles/globals.css";
+import Layout from '@/components/MainLayout';
+import { supabase } from '@/lib/suppabase';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@/styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   const [user, setUser] = useState(null);
@@ -13,9 +14,7 @@ function MyApp({ Component, pageProps }) {
   };
 
   useEffect(() => {
-    const { data: authListener } = supabase.auth.onAuthStateChange(async () =>
-      checkUser()
-    );
+    const { data: authListener } = supabase.auth.onAuthStateChange(async () => checkUser());
     checkUser();
     return () => {
       authListener?.unsubscribe();
