@@ -6,7 +6,7 @@ const TentangKonvalesens = () => {
   return (
     <>
       <Head>
-        <title>Request Plasma Konvalesens</title>
+        <title>Apa Itu Donor Plasma Konvalesens</title>
         <meta name="description" content="Data Donor Plasma Konvalesens" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -14,7 +14,7 @@ const TentangKonvalesens = () => {
       <div className="text-center">
         <Image
           src="/assets/tentang-donor-plasma-konvalesens.jpg"
-          alt="syarat"
+          alt="Tentang Donor Plasma Konvalesens"
           width={590}
           height={600}
           layout="intrinsic"

@@ -78,7 +78,7 @@ const Home = () => {
       <p>
         Kepada Calon Pendonor Penyintas COVID-19,
         <br /> dengan menyerahkan data ini berarti Anda sudah siap menjadi Calon Pendonor Plasma
-        Konvalesens UDD PMI Kota Yogyakarta, silahkan mengisi formulir dibawah ini ini dengan
+        Konvalesens UDD PMI Kota Yogyakarta, silakan mengisi formulir di bawah ini ini dengan
         sejujur-jujurnya.
       </p>
       <Alert show={showSuccess} variant="success">
@@ -91,7 +91,7 @@ const Home = () => {
           </Button>
         </div>
       </Alert>
-      <p>Jika anda memenuhi persyaratan di bawah, mohon isi formulir di bawah ini</p>
+      <p>Jika anda memenuhi persyaratan di bawah, mohon isi formulir di bawah ini.</p>
       <div className="text-center">
         <Image
           src="/assets/IG-PLASMA-31.jpg"
@@ -214,7 +214,7 @@ const Home = () => {
             <option value="M" selected={formik.values.sex === 'M'}>
               Laki-Laki
             </option>
-            <option value="L" selected={formik.values.sex === 'L'}>
+            <option value="F" selected={formik.values.sex === 'F'}>
               Perempuan belum pernah Hamil dan di transfusi darah
             </option>
           </Form.Control>

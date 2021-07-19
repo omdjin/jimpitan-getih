@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     await runMiddleware(req, res, cors);
     // Process a POST request
-    let { error } = await supabase.from('donatur').insert([req.body]);
+    let { error } = await supabase.from('request-plasma').insert([req.body]);
 
     if (error) {
       res.status(201).json({ status: 500, message: error.message });
