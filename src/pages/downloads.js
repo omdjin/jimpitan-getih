@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Button, Row, Col } from 'react-bootstrap';
 
 const Downloads = () => {
@@ -6,6 +7,10 @@ const Downloads = () => {
   };
   return (
     <Row>
+      <Head>
+        <title>Download data</title>
+      </Head>
+      <h1>Download data</h1>
       <Col className="p-3">
         <Button variant="success" className="me-2 mb-2" onClick={() => handleDownload('donatur')}>
           Data Pendonor
