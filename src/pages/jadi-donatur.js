@@ -71,7 +71,11 @@ const Home = () => {
     <>
       <Head>
         <title>Jadi Donatur Plasma Konvalesens</title>
-        <meta name="description" content="Data Donor Plasma Konvalesens" />
+        <meta name="title" content="Jadi Donatur Plasma Konvalesens" />
+        <meta
+          name="description"
+          content="Jadi Donatur Plasma Konvalesens. Plasma anda selamatkan nyawa mereka!"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Jadi Donatur Plasma Konvalesens</h1>

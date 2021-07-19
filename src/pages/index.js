@@ -28,7 +28,7 @@ export default function Home() {
               <Card.Body>
                 <Card.Text>Ajukan kebutuhan Plasma Konvalesens!</Card.Text>
                 <Link href="/request-plasma">
-                  <a href="https://nextjs.org/learn">
+                  <a>
                     <Button variant="primary">Request &rarr;</Button>
                   </a>
                 </Link>
