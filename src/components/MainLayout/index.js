@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import { Col, Container, Navbar, Row } from 'react-bootstrap';
 import TopNav from '@/components/Navigation/Top';
@@ -7,11 +6,6 @@ import styles from './Layout.module.css';
 const Layout = ({ children }) => {
   return (
     <>
-      <Head>
-        <title>Data Donor Plasma Konvalesens</title>
-        <meta name="description" content="Data Donor Plasma Konvalesens" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <TopNav />
       <Container>
         <Row>

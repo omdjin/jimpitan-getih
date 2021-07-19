@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import Layout from '@/components/MainLayout';
+import MetaTag from '@/components/MetaTag';
 import { supabase } from '@/lib/suppabase';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/globals.css';
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Layout>
+      <MetaTag />
       <Component {...pageProps} />
     </Layout>
   );

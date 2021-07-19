@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Card, Container, Col, Row } from 'react-bootstrap';
+import { Button, Card, Container, Col, Row } from 'react-bootstrap';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -14,10 +14,10 @@ export default function Home() {
           <Col md>
             <Card>
               <Card.Body>
+                <Card.Text>Daftarkan diri anda untuk jadi donatur Plasma Konvalesens</Card.Text>
                 <Link href="/jadi-donatur">
                   <a>
-                    <h2>Jadi Donatur &rarr;</h2>
-                    <p>Daftarkan diri anda untuk jadi donatur Plasma Konvalesens.</p>
+                    <Button variant="primary">Jadi Donatur &rarr;</Button>
                   </a>
                 </Link>
               </Card.Body>
@@ -26,10 +26,10 @@ export default function Home() {
           <Col md>
             <Card>
               <Card.Body>
+                <Card.Text>Ajukan kebutuhan Plasma Konvalesens!</Card.Text>
                 <Link href="/request-plasma">
-                  <a href="https://nextjs.org/learn">
-                    <h2>Request &rarr;</h2>
-                    <p>Ajukan kebutuhan Plasma Konvalesens!</p>
+                  <a>
+                    <Button variant="primary">Request &rarr;</Button>
                   </a>
                 </Link>
               </Card.Body>
