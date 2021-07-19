@@ -1,9 +1,10 @@
+import { useState } from 'react';
+
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { Button, Col, Form, InputGroup } from 'react-bootstrap';
+import { Alert, Button, Form, InputGroup } from 'react-bootstrap';
 
 const requiredMsg = 'Harus diisi';
 const INITIAL_VALUES = {
@@ -40,13 +41,25 @@ const schema = yup.object().shape({
 });
 
 const Home = () => {
-  const handleSubmitForm = (values, { resetForm, setSubmitting }) => {
-    setTimeout(() => {
-      console.log('masih on progress');
-      setSubmitting(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleSubmitForm = async (values, { resetForm, setSubmitting }) => {
+    const response = await fetch('/api/donatur', {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(values)
+    });
+    const data = await response.json();
+    setSubmitting(false);
+
+    if (data.status === 201) {
+      setShowSuccess(true);
       resetForm();
       scrollTo(0, 0);
-    }, 400);
+    }
   };
 
   const formik = useFormik({
@@ -61,9 +74,25 @@ const Home = () => {
         <meta name="description" content="Data Donor Plasma Konvalesens" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <h1>Jadi Donatur Plasma Konvalesens</h1>
+      <p>
+        Kepada Calon Pendonor Penyintas COVID-19,
+        <br /> dengan menyerahkan data ini berarti Anda sudah siap menjadi Calon Pendonor Plasma
+        Konvalesens UDD PMI Kota Yogyakarta, silahkan mengisi formulir dibawah ini ini dengan
+        sejujur-jujurnya.
+      </p>
+      <Alert show={showSuccess} variant="success">
+        <Alert.Heading>Berhasil</Alert.Heading>
+        <p>Terima kasih. Data berhasil kami terima.</p>
+        <hr />
+        <div className="d-flex justify-content-end">
+          <Button onClick={() => setShowSuccess(false)} variant="outline-success">
+            Tutup!
+          </Button>
+        </div>
+      </Alert>
+      <p>Jika anda memenuhi persyaratan di bawah, mohon isi formulir di bawah ini</p>
       <div className="text-center">
-        <h1>Jadi Donatur Plasma Konvalesens</h1>
-        <p>Jika anda memenuhi persyaratan di bawah, mohon isi formulir di bawah ini</p>
         <Image
           src="/assets/IG-PLASMA-31.jpg"
           alt="syarat"

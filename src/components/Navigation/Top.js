@@ -16,6 +16,9 @@ const TopNav = () => (
           <Link href="/request-plasma">
             <Nav.Link href="/request-plasma">Request</Nav.Link>
           </Link>
+          <Link href="/tentang-donor-plasma-konvalesens">
+            <Nav.Link href="/request-plasma">Donor Plasma Konvalesens</Nav.Link>
+          </Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
