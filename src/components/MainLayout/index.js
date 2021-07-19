@@ -17,14 +17,8 @@ const Layout = ({ children }) => {
         </Row>
       </Container>
       <Navbar fixed="bottom" className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer">
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+        <a href="https://wa.me/6282227276868?text=" target="_blank" rel="noopener noreferrer">
+          Narahubung / Contact Person : Adi (0822-2727-6868)
         </a>
       </Navbar>
     </>

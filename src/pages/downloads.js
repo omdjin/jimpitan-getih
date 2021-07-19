@@ -9,6 +9,7 @@ const Downloads = () => {
     <Row>
       <Head>
         <title>Download data</title>
+        <meta name="robots" content="noindex"></meta>
       </Head>
       <h1>Download data</h1>
       <Col className="p-3">
